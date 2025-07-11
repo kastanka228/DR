@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переход по клику</title>
+    <style>
+        body {
+            background-color: #65000B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        #clickableImage {
+            cursor: pointer;
+            width: 400px; /* Размер можно изменить по вашему вкусу */
+            height: auto;
+            transition: transform 0.2s; /* Плавное увеличение при наведении */
+        }
+        #clickableImage:hover {
+            transform: scale(1.05); /* Легкое увеличение при наведении */
+        }
+    </style>
+</head>
+<body>
+    <img id="clickableImage" src="https://i.yapx.ru/Z1yOO.png" alt="Нажмите для перехода">
+
+    <script>
+        document.getElementById('clickableImage').addEventListener('click', function() {
+            // Меняем изображение на второе
+            this.src = "https://i.yapx.ru/Z1zDf.png";
+            
+            // Перенаправляем на другой сайт через 500 мс
+            setTimeout(function() {
+                window.location.href = "https://kastanka228.github.io/DINE./"; // Замените на нужный URL
+            }, 500);
+        });
+    </script>
+</body>
+</html>
